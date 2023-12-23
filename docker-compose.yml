@@ -6,9 +6,9 @@ services:
         image: postgres:16.0-alpine
         restart: always
         environment:
-            - POSTGRES_USER=${TYPEORM_USERNAME}
-            - POSTGRES_PASSWORD=${TYPEORM_PASSWORD}
-            - POSTGRES_DB=${TYPEORM_DATABASE}
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=123123
+            - POSTGRES_DB=taskmanager
         volumes:
             - ./volumes/pgdata:/var/lib/postgresql/data
         ports:

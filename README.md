@@ -22,3 +22,15 @@ psql --username=taskmanager
 
 CREATE SCHEMA taskmanager;
 ```
+
+## for docker
+
+```bash
+docker run --name postgres-taskmanager -p 5432:5432 -e POSTGRES_PASSWORD=123123 -d postgres
+
+TYPEORM_CONNECTION=postgres
+TYPEORM_USERNAME=postgres
+TYPEORM_PASSWORD=123123
+TYPEORM_DATABASE=postgres
+TYPEORM_PORT=5432
+```
